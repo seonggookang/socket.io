@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="user-container">
+        <!--for과 id 똑같이 맞춰주면 이거 선택해도 저게 선택되는 효과 -->
+        <label for="nickname">대화명</label>
+        <input type="text" id="nickname" />
+      </div>
+      <div class="display-container">
+        <ul class="chatting-l ist"></ul>
+      </div>
+      <div class="input-container">
+        <span>
+          <!--디자인을 먹일 때 더 수월 -->
+          <input type="text" class="chatting-input" />
+          <button class="send-button">전송</button>
+          <!--전송한 내용이 서버로 전송되게 기능구현 -->
+        </span>
+      </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/chat.js"></script>
+    <!-- express를 사용하기 떄문에 절대경로를 사용하면 다운로드 받은 라이브러리에 접근 가능 -->
+  </body>
+</html>
